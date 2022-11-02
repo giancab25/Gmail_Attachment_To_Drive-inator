@@ -92,11 +92,9 @@ def GetFiles(service, user_id, msg_id):
 def main():
 
     creds = None
-    """
-    The file token.json stores the user's access and refresh tokens, and is
-    created automatically when the authorization flow completes for the first
-    time.
-    """
+    
+    # token.json stores a user's login access as a token and is created during first run of authorization
+    
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
 
